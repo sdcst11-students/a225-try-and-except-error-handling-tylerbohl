@@ -15,3 +15,14 @@ The reciprocal of 3 is 0.3333333333333333
 The reciprocal of 4 is 0.25
 """
 numbers = [0,1,2,3,4]
+resipricals = []
+
+for i in (numbers):
+    try:
+        resipricals.append(1 / numbers[i])
+    except:
+        resipricals.append("N/A")
+
+for i in (numbers):
+    print(f"The reciprocal of {numbers[i]} is {resipricals[i]}")
+

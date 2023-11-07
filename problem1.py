@@ -29,9 +29,43 @@ b:8
 c:16
 The roots are -4.0 and -4.0
 """
+import math
 import os
 os.system('cls')
 
 
 print("Enter in the coefficients for a quadratic equation in the format:")
 print("  ax^2 + bx + c = 0")
+
+
+at = True
+bt = True
+ct = True
+while at == True:
+ a = input("a: ")
+ try:
+  a = int(a)
+  at = False
+ except:
+  print("invalid input for a\nEnter a new value")
+while bt == True:
+ b = input("b: ")
+ try:
+  b = int(b)
+  bt = False
+ except:
+  print("invalid input for b\nEnter a new value")
+while ct == True:
+ c = input("c: ")
+ try:
+  c = int(c)
+  ct = False
+ except:
+  print("invalid input for c\nEnter a new value")
+
+try:
+ answer = ((0.5**(b*2-(4*a*c)))-b)/(2*a)
+ answer = round(answer,2)
+except:
+  answer = "No Answer"
+print(answer)
